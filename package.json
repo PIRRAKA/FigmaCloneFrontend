@@ -1,0 +1,46 @@
+{
+  "name": "figmaclonefrontend",
+  "version": "1.0.0",
+  "description": "Herramienta open-source para convertir diseños de Figma a código frontend con IA",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write .",
+    "generate": "node src/generator.js --help"
+  },
+  "keywords": [
+    "figma",
+    "frontend",
+    "codegen",
+    "ai"
+  ],
+  "author": "TuNombre <tuemail@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@builder.io/mitosis": "^0.12.0",
+    "axios": "^1.7.2",
+    "commander": "^14.0.0",
+    "ejs": "^3.1.10",
+    "figma-js": "^1.16.1-0",
+    "openai": "^5.9.0",
+    "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.6.1",
+    "eslint-plugin-jest": "^29.0.1",
+    "globals": "^16.3.0",
+    "jest": "^30.0.4",
+    "prettier": "^3.3.2",
+    "puppeteer": "^22.15.0"
+  },
+  "resolutions": {
+    "svelte": "^4.2.19"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 80
+  }
+}

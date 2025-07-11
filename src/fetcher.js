@@ -10,8 +10,7 @@ async function fetchFigmaDesign(fileKey, accessToken) {
     });
     return response.data;
   } catch (error) {
-    console.error('Error fetching Figma file:', error.message);
-    throw error;
+    throw new Error(`Error fetching Figma file: ${error.message}`);
   }
 }
 

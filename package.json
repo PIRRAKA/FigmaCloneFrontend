@@ -33,7 +33,7 @@
     "globals": "^16.3.0",
     "jest": "^30.0.4",
     "prettier": "^3.3.2",
-    "puppeteer": "^22.15.0"
+    "puppeteer": "^24.12.1"
   },
   "resolutions": {
     "svelte": "^4.2.19"

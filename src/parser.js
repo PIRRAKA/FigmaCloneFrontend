@@ -1,15 +1,17 @@
 function parseFigmaDesign(data) {
   const document = data.document;
-  function traverse(node) {
+  function traverse(node, warnings = []) {
     if (node.type === 'FRAME' && !node.layoutMode) {
-      console.warn('Warning: Auto Layout missing in node', node.id);
+      warnings.push(`Auto Layout missing in node ${node.id}`);
     }
     if (node.children) {
-      node.children.forEach(traverse);
+      node.children.forEach(child => traverse(child, warnings));
     }
+    return warnings;
   }
-  traverse(document);
+  const warnings = traverse(document);
+  if (warnings.length) throw new Error(warnings.join('; '));
   return document;
-}
+  }
 
 module.exports = { parseFigmaDesign };
